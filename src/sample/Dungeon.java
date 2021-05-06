@@ -18,4 +18,8 @@ public class Dungeon {
 
         return false;
     }
+
+    public Soldier getFighter() {
+        return fighter;
+    }
 }

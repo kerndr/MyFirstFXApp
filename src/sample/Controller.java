@@ -85,17 +85,17 @@ public class Controller {
         Dungeon d1 = new Dungeon("The Classroom","Maybe you'll learn something here.",poolOfFighters[0]);
         Dungeon d2 = new Dungeon("The Arena","Countless fighters have fallen here.",poolOfFighters[1]);
         Dungeon d3 = new Dungeon("The Library","Don't disturb the books!",poolOfFighters[2]);
-        Dungeon d4 = new Dungeon("The Classroom","Maybe you'll learn something here.",poolOfFighters[3]);
-        Dungeon d5 = new Dungeon("The Arena","Countless fighters have fallen here.",poolOfFighters[4]);
-        Dungeon d6 = new Dungeon("The Library","Don't disturb the books!",poolOfFighters[5]);
-        Dungeon d7 = new Dungeon("The Classroom","Maybe you'll learn something here.",poolOfFighters[6]);
-        Dungeon d8 = new Dungeon("The Arena","Countless fighters have fallen here.",poolOfFighters[7]);
-        Dungeon d9 = new Dungeon("The Library","Don't disturb the books!",poolOfFighters[8]);
-        Dungeon d10 = new Dungeon("The Classroom","Maybe you'll learn something here.",poolOfFighters[9]);
-        Dungeon d11 = new Dungeon("The Arena","Countless fighters have fallen here.",poolOfFighters[10]);
-        Dungeon d12 = new Dungeon("The Library","Don't disturb the books!",poolOfFighters[11]);
-        Dungeon d13 = new Dungeon("The Classroom","Maybe you'll learn something here.",poolOfFighters[12]);
-        Dungeon d14 = new Dungeon("The Arena","Countless fighters have fallen here.",poolOfFighters[13]);
+        Dungeon d4 = new Dungeon("The Kitchen","Attacking your opponent with pots and pans.",poolOfFighters[3]);
+        Dungeon d5 = new Dungeon("The Spaceship","The gravity might make fighting hard.",poolOfFighters[4]);
+        Dungeon d6 = new Dungeon("The Battlefield","Your fight is only one of many happening around you.",poolOfFighters[5]);
+        Dungeon d7 = new Dungeon("The Cliff","Be careful, or you might fall off.",poolOfFighters[6]);
+        Dungeon d8 = new Dungeon("The Beach","The peaceful water provides a nice background to your fight.",poolOfFighters[7]);
+        Dungeon d9 = new Dungeon("The Garden","The blood of your opponent will make good fertilizer.",poolOfFighters[8]);
+        Dungeon d10 = new Dungeon("The Playground","If all else fails, you can push your opponent down the slide.",poolOfFighters[9]);
+        Dungeon d11 = new Dungeon("The Lake","Try not to get seasick.",poolOfFighters[10]);
+        Dungeon d12 = new Dungeon("The Volcano","This might not be the safest place to fight.",poolOfFighters[11]);
+        Dungeon d13 = new Dungeon("The Airport","Don't miss your flight!",poolOfFighters[12]);
+        Dungeon d14 = new Dungeon("The .","",poolOfFighters[13]);
         Dungeon d15 = new Dungeon("The Library","Don't disturb the books!",poolOfFighters[14]);
         Dungeon d16 = new Dungeon("The Classroom","Maybe you'll learn something here.",poolOfFighters[15]);
         Dungeon[] dungeons= {d1, d2, d3, d4, d5, d6, d7, d8, d9, d10, d11, d12, d13, d14, d15,d16};
@@ -122,12 +122,6 @@ public class Controller {
         button00Pressed();
 
     }
-    public static void button00Pressed(){
-        fightStatusLabel.setText("hi");
-    }
-    public static void button01Pressed(){
-
-    }
     public static void attackButtonPressed(){
         int playerAttackStrength = player.attack();
         opponent.subtractHealth(playerAttackStrength);
@@ -146,8 +140,20 @@ public class Controller {
             //playerTurn=false;
         }
     }
+    public static void button00Pressed(){
+        fightStatusLabel.setText("hi");
+    }
+    public static void button01Pressed(){
+        playerX=2;
+        playerY=0;
+        currentDungeon=dungeonMaze[0][2];
+        opponent=currentDungeon.getFighter();
+    }
     public static void button02Pressed(){
-
+        playerX=2;
+        playerY=0;
+        currentDungeon=dungeonMaze[0][2];
+        opponent=currentDungeon.getFighter();
     }
     public static void button03Pressed(){
 
